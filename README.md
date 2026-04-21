@@ -107,14 +107,13 @@ Daily volatility forecasting dataset covering five ETFs (GLD, HYG, QQQ, SPY, USO
 | `y_1` | Realized close-to-close volatility (annualized %) over the next 1 trading day |
 | `y_5` | Realized volatility over the next 5 trading days |
 | `y_21` | Realized volatility over the next 21 trading days |
-| `L{k}.close-to-close` | Lag-k daily close-to-close volatility (k=1..20) |
-| `L{k}.neg_ret_cc` | Lag-k negative return indicator (asymmetric volatility predictor) |
-| `MA{k}.close-to-close` | k-day moving average of close-to-close volatility |
-| `MA{k}.neg_ret_cc` | k-day moving average of negative return indicator |
-| `LWMA{k}.close-to-close` | k-day linearly weighted moving average of volatility |
-| `LWMA{k}.neg_ret_cc` | k-day linearly weighted moving average of negative return indicator |
-| `L{k}.SPY.*` | SPY market-wide equivalents of the above (for non-SPY symbols) |
-| `MA{k}.SPY.*` | SPY moving averages (for non-SPY symbols) |
-| `LWMA{k}.SPY.*` | SPY linearly weighted moving averages (for non-SPY symbols) |
+| `MA1.close-to-close` | 1-day (most recent) close-to-close volatility |
+| `MA5.close-to-close` | 5-day moving average of close-to-close volatility |
+| `MA20.close-to-close` | 20-day moving average of close-to-close volatility |
+| `MA1.neg_ret_cc` | Most recent negative-return indicator (captures asymmetric vol response) |
+| `MA5.neg_ret_cc` | 5-day moving average of negative-return indicator |
+| `MA1.SPY.close-to-close` | Most recent SPY close-to-close volatility (market predictor) |
+| `MA5.SPY.close-to-close` | 5-day SPY volatility moving average |
+| `MA20.SPY.close-to-close` | 20-day SPY volatility moving average |
 
 Volatility is measured in annualized percentage points. The dataset is suitable for demonstrating that lognormal and heavier-tailed models outperform OLS for forecasting positive, right-skewed quantities.
